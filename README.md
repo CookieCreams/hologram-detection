@@ -1,29 +1,35 @@
 # Détection d'hologramme (à partir de vidéos) / Approche par patch
 
 ## Objectifs
-Le but de ce projet est de pouvoir détecter la présence d'un hologramme sur un passeport et de déterminer si le document est authentique ou s'il s'agit d'une fraude. 
-Pour cela, on s'est servi d'un dataset MIDV-Holo qui possède des vidéos de passeport prise à l'aide de smartphones. A partir des frames de ces vidéos, on essayera de créer des mosaïques qui représentent l'évolution d'une zone locale sur un passeport.
+Le but de ce projet est de pouvoir détecter la présence d'un hologramme sur un passeport et de déterminer si le document est authentique ou s'il s'agit d'une fraude. Pour cela, nous nous sommes servis d'un dataset MIDV-Holo qui possède des vidéos de passeports prises à l'aide de smartphones. À partir des images extraites de ces vidéos, nous essaierons de créer des mosaïques qui représentent l'évolution d'une zone locale sur un passeport.
 
 <img src="readme/holo.png" alt="Pred" width="500"/>
 
-Exemple d'un passeport français contenant un hologramme de la France
+Exemple d'un passeport français contenant un hologramme de la France.
 
 ## Dataset
 
 Le dataset utilisé pour créer les mosaïques est celui de MIDV-Holo.
 
-[Visitez GitHub](https://github.com)
+[Lien du dataset](https://github.com/SmartEngines/midv-holo)
+
+Le dataset se compose comme suit :
+
+<img src="readme/midv.png" alt="Pred" width="1000"/>
+
+Il contient des vidéos de type "origines" et des vidéos de type "fraude". Pour les fraudes, il existe 4 types : copy_without_holo, pseudo_holo_copy, photo_holo_copy et photo_replacement. Il existe également des fichiers JSON pour chaque image clé qui permettent de réaliser une homographie afin de pouvoir travailler uniquement sur le passeport.
 
 ## Méthodologie
 
 <img src="readme/pipeline1.png" alt="Pred" width="1000"/>
 
-On utilise un patch de 200x200 pixels sur les frames d'une vidéo. On récupère ces vignettes que l'on concatenera sur une image pour obtenir une mosaïque qui montre l'évolution de cette zone au cours de la vidéo. On glisse le patch pour essayer de créer un maximum de mosaïques. Ces mosaïques contenant de l'hologramme ou non constitueront un dataset pour entrainer un modèle CNN pour classifier ces mosaïques. Le modèle essayera de prédire localement sur de nouvelles vidéos si il y a un bout d'hologramme. On peut ensuite créer une color map de ces prédictions :
+Nous utilisons un patch de 200x200 pixels sur les images d'une vidéo. Nous récupérons ces vignettes que nous concaténerons sur une image pour obtenir une mosaïque qui montre l'évolution de cette zone au cours de la vidéo. Nous glissons le patch pour essayer de créer un maximum de mosaïques. Ces mosaïques contenant de l'hologramme ou non constitueront un dataset pour entraîner un modèle CNN afin de classifier ces mosaïques.
+
+Le modèle essaiera de prédire localement sur de nouvelles vidéos s'il y a un bout d'hologramme. Nous pouvons ensuite créer une carte de couleurs de ces prédictions :
 
 <img src="readme/pred.png" alt="Pred" width="500"/>
 
 ## Inference
-
 
 ## Résultats
 
