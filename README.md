@@ -17,6 +17,7 @@ Exemple d'un passeport français contenant un hologramme de la France
 
 On utilise un patch de 200x200 pixels sur les frames d'une vidéo. On récupère ces vignettes que l'on concatenera sur une image pour obtenir une mosaïque qui montre l'évolution de cette zone au cours de la vidéo. On glisse le patch pour essayer de créer un maximum de mosaïques. Ces mosaïques contenant de l'hologramme ou non constitueront un dataset pour entrainer un modèle CNN pour classifier ces mosaïques. Le modèle essayera de prédire localement sur de nouvelles vidéos si il y a un bout d'hologramme. On peut ensuite créer une color map de ces prédictions :
 
+![](readme/pred.png)
 
 
 ## Résultats
