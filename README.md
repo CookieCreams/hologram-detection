@@ -11,6 +11,7 @@ Exemple d'un passeport français contenant un hologramme de la France
 
 ## Dataset
 
+Le dataset utilisé pour créer les mosaïques est celui de MIDV-Holo.
 
 ## Méthodologie
 
