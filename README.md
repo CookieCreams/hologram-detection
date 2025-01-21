@@ -3,7 +3,7 @@
 ## Objectifs
 Le but de ce projet est de pouvoir détecter la présence d'un hologramme sur un passeport et de déterminer si le document est authentique ou s'il s'agit d'une fraude. Pour cela, nous nous sommes servis d'un dataset MIDV-Holo qui possède des vidéos de passeports prises à l'aide de smartphones. À partir des images extraites de ces vidéos, nous essaierons de créer des mosaïques qui représentent l'évolution d'une zone locale sur un passeport.
 
-<img src="readme/holo.png" alt="Pred" width="500"/>
+<img src="readme/holo.png" alt="Pred" width="200"/>
 
 Exemple d'un passeport français contenant un hologramme de la France.
 
