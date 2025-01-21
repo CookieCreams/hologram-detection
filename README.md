@@ -23,6 +23,5 @@ On utilise un patch de 200x200 pixels sur les frames d'une vidéo. On récupère
 
 ## Résultats
 
-![](readme/res1.png)
-
-![](readme/res2.png)
+<img src="readme/res1.png" alt="Résultat 1" width="500"/>
+<img src="readme/res2.png" alt="Résultat 2" width="500"/>
