@@ -20,6 +20,8 @@ On utilise un patch de 200x200 pixels sur les frames d'une vidéo. On récupère
 
 ![](readme/pred.png)
 
+<img src="readme/pred.png" alt="Pred" width="500"/>
+
 ## Inference
 
 
