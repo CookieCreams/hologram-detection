@@ -3,7 +3,7 @@
 ## Objectifs
 Le but de ce projet est de pouvoir détecter la présence d'un hologramme sur un passeport et de déterminer si le document est authentique ou s'il s'agit d'une fraude. Pour cela, nous nous sommes servis d'un dataset MIDV-Holo qui possède des vidéos de passeports prises à l'aide de smartphones. À partir des images extraites de ces vidéos, nous essaierons de créer des mosaïques qui représentent l'évolution d'une zone locale sur un passeport.
 
-<img src="readme/holo.png" alt="Pred" width="200"/>
+<img src="readme/holo.png" alt="Pred" width="500"/>
 
 Exemple d'un passeport français contenant un hologramme de la France.
 
@@ -15,7 +15,7 @@ Le dataset utilisé pour créer les mosaïques est celui de MIDV-Holo.
 
 Le dataset se compose comme suit :
 
-<img src="readme/midv.png" alt="Pred" width="1000"/>
+<img src="readme/midv.png" alt="Pred" width="400"/>
 
 Il contient des vidéos de type "origines" et des vidéos de type "fraude". Pour les fraudes, il existe 4 types : copy_without_holo, pseudo_holo_copy, photo_holo_copy et photo_replacement. Il existe également des fichiers JSON pour chaque image clé qui permettent de réaliser une homographie afin de pouvoir travailler uniquement sur le passeport.
 
