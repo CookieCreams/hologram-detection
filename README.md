@@ -23,3 +23,6 @@ On utilise un patch de 200x200 pixels sur les frames d'une vidéo. On récupère
 
 ## Résultats
 
+![](readme/res1.png)
+
+![](readme/res2.png)
