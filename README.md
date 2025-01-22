@@ -16,7 +16,7 @@ Le dataset utilisé pour créer les mosaïques est celui de MIDV-Holo.
 
 Le dataset se compose comme ci:
 
-<img src="readme/midv.png" alt="Pred" width="1000"/>
+<img src="readme/midv.png" alt="Pred" width="500"/>
 
 Il contient des vidéos type origins et des vidéos type fraude:
 Pour les fraudes, il existe 4 types: copy_without_holo, pseudo_holo_copy, photo_holo_copy et photo_replacement.
