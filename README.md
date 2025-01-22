@@ -29,7 +29,7 @@ Dans le dossier "Outils", il existe un script homography.py qui permet de visual
 
 Nous utilisons un patch de 200x200 pixels sur les images d'une vidéo. Nous récupérons ces vignettes que nous concaténerons sur une image pour obtenir une mosaïque qui montre l'évolution de cette zone au cours de la vidéo. Ensuite nous glissons le patch pour essayer de créer un maximum de mosaïques. Ces mosaïques contenant de l'hologramme ou non constitueront un dataset pour entraîner un modèle CNN afin de classifier ces mosaïques.
 
-Pour créer. le dossier "Création mosaiques" contient un script create_dataset.py qui permet de créer des mosaiques hologrammes à partir des vidéos origins et un script create_fraud.py qui permet de créer des mosaiques non hologramme à partir des vidéos fraude.
+Pour créer les mosaïques, le dossier "Création mosaiques" contient un script create_dataset.py qui permet de créer des mosaiques hologrammes à partir des vidéos origins et un script create_fraud.py qui permet de créer des mosaiques non hologramme à partir des vidéos fraude.
 La répartition des vidéos pour la construction du dataset s'est fait en copiant celui réaliser dans [le papier](https://arxiv.org/pdf/2404.17253).
 
 L'entrainement du modèle peut-être consulté dans le script jupyter train.ipynb. Le modèle utilisé est MobilenetV2, celui-ci a été fine-tuné sur le dataset de mosaïques.
@@ -42,11 +42,24 @@ Après l'entrainement, le modèle essayera de prédire localement sur de nouvell
 
 ## Inference
 
+Pour l'inference, il faut calculer un seuil qui puisse indiquer si le passeport est vrai ou bien un faux en fonction des prédictions locales.
+Le dossier "Inference" contient un script seuilf1.py, qui calcule ce seuil sur les données de validation en fonction du f-score.
+
+<img src="readme/seuil.png" alt="Pred" width="500"/>
+
+Les données de validation ont été obtenues à partir du script validation.ipnyb qui utilise le modèle sur les données de validation et récupère le nombre de mosaïques prédites hologrammes pour chaque vidéo.
 
 ## Résultats
 
+Voici les résultats obtenus au niveau mosaïques sur les données de tests:
+
 <img src="readme/res1.png" alt="Résultat 1" width="500"/>
+
+Voici les résultats obtenus au niveau vidéos sur les données de tests:
+
 <img src="readme/res2.png" alt="Résultat 2" width="500"/>
+
+Le modèle n'arrive pas toujours à bien détecter si un passeport est vrai. Si on regarde dans le script test, on peut voir que certaines vidéos sont en fait proche du seuil mais juste légèrement en dessous.
 
 ## Bibliographie
 
