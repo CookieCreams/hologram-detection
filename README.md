@@ -25,7 +25,7 @@ Dans le dossier "Outils", il existe un script homography.py qui permet de visual
 
 ## Méthodologie
 
-<img src="readme/pipeline1.png" alt="Pred" width="500"/>
+<img src="readme/pipeline1.png" alt="Pred" width="800"/>
 
 Nous utilisons un patch de 200x200 pixels sur les images d'une vidéo. Nous récupérons ces vignettes que nous concaténerons sur une image pour obtenir une mosaïque qui montre l'évolution de cette zone au cours de la vidéo. Nous glissons le patch pour essayer de créer un maximum de mosaïques. Ces mosaïques contenant de l'hologramme ou non constitueront un dataset pour entraîner un modèle CNN afin de classifier ces mosaïques.
 
