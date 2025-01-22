@@ -12,7 +12,7 @@ Exemple d'un passeport français contenant un hologramme de la France
 
 Le dataset utilisé pour créer les mosaïques est celui de MIDV-Holo.
 
-[Lien du dataset]([https://github.com](https://github.com/SmartEngines/midv-holo))
+[Lien du dataset](https://github.com/SmartEngines/midv-holo)
 
 Le dataset se compose comme ci:
 
@@ -27,7 +27,7 @@ Dans le dossier "Outils", il existe un script homography.py qui permet de visual
 
 <img src="readme/pipeline1.png" alt="Pred" width="1000"/>
 
-Nous utilisons un patch de 200x200 pixels sur les images d'une vidéo. Nous récupérons ces vignettes que nous concaténerons sur une image pour obtenir une mosaïque qui montre l'évolution de cette zone au cours de la vidéo. Nous glissons le patch pour essayer de créer un maximum de mosaïques. Ces mosaïques contenant de l'hologramme ou non constitueront un dataset pour entraîner un modèle CNN afin de classifier ces mosaïques.
+Nous utilisons un patch de 200x200 pixels sur les images d'une vidéo. Nous récupérons ces vignettes que nous concaténerons sur une image pour obtenir une mosaïque qui montre l'évolution de cette zone au cours de la vidéo. Ensuite nous glissons le patch pour essayer de créer un maximum de mosaïques. Ces mosaïques contenant de l'hologramme ou non constitueront un dataset pour entraîner un modèle CNN afin de classifier ces mosaïques.
 
 Pour créer. le dossier "Création mosaiques" contient un script create_dataset.py qui permet de créer des mosaiques hologrammes à partir des vidéos origins et un script create_fraud.py qui permet de créer des mosaiques non hologramme à partir des vidéos fraude.
 La répartition des vidéos pour la construction du dataset s'est fait en copiant celui réaliser dans [le papier](https://arxiv.org/pdf/2404.17253).
