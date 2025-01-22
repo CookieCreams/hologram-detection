@@ -45,7 +45,7 @@ Après l'entrainement, le modèle essayera de prédire localement sur de nouvell
 Pour l'inference, il faut calculer un seuil qui puisse indiquer si le passeport est vrai ou bien un faux en fonction des prédictions locales.
 Le dossier "Inference" contient un script seuilf1.py, qui calcule ce seuil sur les données de validation en fonction du f-score.
 
-<img src="readme/seuil.png" alt="Pred" width="500"/>
+<img src="readme/seuilf.png" alt="Pred" width="500"/>
 
 Les données de validation ont été obtenues à partir du script validation.ipnyb qui utilise le modèle sur les données de validation et récupère le nombre de mosaïques prédites hologrammes pour chaque vidéo.
 
