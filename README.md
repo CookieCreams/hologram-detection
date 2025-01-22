@@ -30,7 +30,7 @@ Dans le dossier "Outils", il existe un script homography.py qui permet de visual
 Nous utilisons un patch de 200x200 pixels sur les images d'une vidéo. Nous récupérons ces vignettes que nous concaténerons sur une image pour obtenir une mosaïque qui montre l'évolution de cette zone au cours de la vidéo. Nous glissons le patch pour essayer de créer un maximum de mosaïques. Ces mosaïques contenant de l'hologramme ou non constitueront un dataset pour entraîner un modèle CNN afin de classifier ces mosaïques.
 
 Pour créer. le dossier "Création mosaiques" contient un script create_dataset.py qui permet de créer des mosaiques hologrammes à partir des vidéos origins et un script create_fraud.py qui permet de créer des mosaiques non hologramme à partir des vidéos fraude.
-La répartition des vidéos pour la construction du dataset s'est fait en copiant celui réaliser dans le [papier]([[https://github.com](https://arxiv.org/pdf/2404.17253)]([https://github.com/SmartEngines/midv-holo](https://arxiv.org/pdf/2404.17253)))
+La répartition des vidéos pour la construction du dataset s'est fait en copiant celui réaliser dans le [papier]([https://github.com]([https://github.com/SmartEngines/midv-holo](https://arxiv.org/pdf/2404.17253)))
 
 Après l'entrainement, le modèle essayera de prédire localement sur de nouvelles vidéos si il y a un bout d'hologramme. On peut ensuite créer une color map de ces prédictions :
 
