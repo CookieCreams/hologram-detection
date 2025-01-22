@@ -59,7 +59,8 @@ Voici les résultats obtenus au niveau vidéos sur les données de tests:
 
 <img src="readme/res2.png" alt="Résultat 2" width="500"/>
 
-Le modèle n'arrive pas toujours à bien détecter si un passeport est vrai. Si on regarde dans le script test, on peut voir que certaines vidéos sont en fait proche du seuil mais juste légèrement en dessous.
+Le modèle n'arrive pas toujours à bien détecter si un passeport est vrai. Si on regarde dans le script test, on peut voir que certaines vidéos sont en fait proche du seuil mais juste légèrement en dessous. Les causes sont principalement un problème au niveau de l'éclairage dans les vidéos ou bien que l'hologramme ne soit pas assez visibles. 
+Cependant, les résultats sont très bons pour les fraudes où la méthode arrive à les détecter à 100%.
 
 ## Bibliographie
 
